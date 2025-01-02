@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KPF TEST</title>
+  </head>
+  <body>
+    A key was pressed : <span id='aLbl'></span>
+    B key was pressed : <span id='bLbl'></span>
+    <script src="kpf.js"></script>
+    <script>
+      const aKey = new KPF('a');
+      const bKey = new KPF('b');
+
+      setInterval(()=>{
+        const $ = v=>document.querySelector(v);
+        $('aLbl').innerHTML = aKey;
+        $('bLbl').innerHTML = bKey;
+      });
+    </script>
+  </body>
+</html>
